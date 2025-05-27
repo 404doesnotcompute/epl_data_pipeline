@@ -1,0 +1,36 @@
+# OS / IDE files
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Python environment
+.venv/
+env/
+venv/
+*.egg-info/
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yaml
+
+# Git & logs
+.git/
+.gitignore
+*.log
+
+# Data / temp files
+*.csv
+*.parquet
+*.sqlite
+*.db
+output/
+data/
+*.zip
+helper.py
+
+# Secrets 
+.env
+.env.*

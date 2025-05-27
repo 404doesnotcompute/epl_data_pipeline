@@ -1,0 +1,49 @@
+#python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+#apple metadata
+.DS_store
+
+#Virtual Environments
+venv/
+env/
+.venv/
+de_prep/
+
+#VS code
+.vscode/
+
+# Environment Variables
+.env
+.env.*
+
+#Log and Outputs
+*.log
+
+# Jupyter notebook checkpoints (if used)
+.ipynb_checkpoints/
+
+# Unit test cache
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# MyPy / type checking
+.mypy_cache/
+
+# Linting
+.pylint.d/
+
+# Compiled C files (optional)
+*.so
+
+# Distribution files
+build/
+dist/
+*.egg-info/
+
+# Scratch Pads
+helper.py
