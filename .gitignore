@@ -47,3 +47,6 @@ dist/
 
 # Scratch Pads
 helper.py
+pgadmin_data/
+postgres_data/
+data/

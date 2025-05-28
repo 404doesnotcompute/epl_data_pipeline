@@ -66,21 +66,34 @@ class PostgresWrapper:
             logger.warning(f"CSV export failed: {e}")
 
     def copy_from_df(self,df,table):
+        """
+        Efficiently loads a DataFrame into a PostgreSQL table using COPY.
+        Rolls back on failure and logs meaningful messages.
+        """
         try:
-            #saves dataframe to memory
+            if df.empty:
+                logger.warning(f"DataFrame is empty. Skipping insert to {table}")
+                return False
+
+            #Writes DataFrame to memory
             buffer = StringIO()
             df.to_csv(buffer, header=False,index=False)
             buffer.seek(0)
 
-            self.cursor.copy_expert(
-                f"COPY {table} FROM STDIN WITH CSV",buffer
-            )
+            columns = ','.join(df.columns)
+            sql = f"COPY {table} ({columns}) FROM STDIN WITH CSV"
 
+            with self.conn.cursor() as cursor:
+                cursor.copy_expert(sql,buffer)
             self.conn.commit()
-            logger.info(f"Data inserted into: {table}")
+
+            logger.info(f"Data inserted into: {table} ({len(df)} rows)")
+            return True
+        
         except Exception as e:
             logger.warning(f"Data export failed: {e}")
-            return None
+            self.conn.rollback()
+            return False
 
     def close(self):
         try:
@@ -89,4 +102,4 @@ class PostgresWrapper:
             logger.info("PostgreSQL Connection is closed!")
         except Exception as e:
             logger.warning(f"There was trouble closing the connection: {e}")
-            return None
+            return False
