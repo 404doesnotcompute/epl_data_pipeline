@@ -88,9 +88,17 @@ This project builds an end-to-end data pipeline that ingests English Premier Lea
 
 ## Diagram
 ```mermaid
----
-Title: EPL Data Pipeline
----
+%%{ init : {
+  "theme" : "default",
+  "themeVariables": {
+    "primaryColor": "#1e88e5",
+    "secondaryColor": "#90caf9",
+    "primaryTextColor": "#ffffff",
+    "secondaryTextColor": "#000000",
+    "lineColor": "#e3f2fd",
+    "tertiaryColor": "#e0f7fa"
+  }
+}}%%
 flowchart LR
     
     A -->|Raw JSON stored| B2[/Upload to S3/]
@@ -111,12 +119,6 @@ flowchart LR
 
     style D fill:#f9f,stroke:#333,stroke-width:1px
     style E fill:#f9f,stroke:#333,stroke-width:1px
-
-    %% Style nodes inside the subgraph
-    style C1 fill:#e0f7fa,stroke:#00796b,stroke-width:2px
-    style C2 fill:#e0f7fa,stroke:#00796b,stroke-width:2px
-    style C3 fill:#e0f7fa,stroke:#00796b,stroke-width:2px
-    style C4 fill:#e0f7fa,stroke:#00796b,stroke-width:2px
 ```
 ## Getting started
 
