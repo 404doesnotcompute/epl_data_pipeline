@@ -212,7 +212,7 @@ This project is built to reflect real-world data engineering tasks:
 
 ## Tech Stack
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
 ![AWS S3](https://img.shields.io/badge/AWS-S3-orange?logo=amazonaws&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Cleaning-black?logo=pandas&logoColor=white)
