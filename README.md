@@ -219,3 +219,4 @@ This project is built to reflect real-world data engineering tasks:
 ![AWS S3](https://img.shields.io/badge/AWS-S3-orange?logo=amazonaws&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Cleaning-black?logo=pandas&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Optional-lightblue?logo=docker&logoColor=white)
+![v2-in-progress](https://img.shields.io/badge/version-v2--in--progress-yellow?style=flat-square)
